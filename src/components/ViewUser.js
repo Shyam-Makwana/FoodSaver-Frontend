@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import { Link } from 'react-router-dom';
 
 const ViewUser = props => {
     return (
@@ -11,9 +12,9 @@ const ViewUser = props => {
                                 <img src={props.items.Url} className="mx-auto img-fluid img-circle d-block" alt="avatar" />
                             </div>
                             <h3 className="mt-2">{props.items.name}</h3>
-                            <a href="/editprofile">
+                            <Link to="/editprofile">
                                 <button type="submit" className="btn btn-primary align-self-center mt-2">Edit Profile</button>
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-lg-8 order-lg-2 mt-3">
                             <div className="tab-content py-4">

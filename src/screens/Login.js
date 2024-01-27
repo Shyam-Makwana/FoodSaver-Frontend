@@ -3,6 +3,7 @@ import { AuthContext } from '../context/auth-context';
 import Header from '../components/Header';
 import { useHistory } from "react-router-dom";
 import { useHttpClient } from '../hooks/http-hook';
+import { Link } from 'react-router-dom';
 
 function Login() {
 
@@ -74,12 +75,12 @@ function Login() {
                             </div>
                             <div className="text-center">
                                 <div className="container mt-1 mb-0 text-center text-danger" >
-                                    <a className="text-danger" href="/reset-password">Forgot Password?</a>
+                                    <Link className="text-danger" to="/reset-password">Forgot Password?</Link>
                                 </div>
                             </div>
                             <div className="text-center">
                                 <div className="container mt-1 mb-0 text-center text-danger" >
-                                    <a href="/signup">Don't have an account? Register</a>
+                                    <Link to="/signup">Don't have an account? Register</Link>
                                 </div>
                             </div>
                         </form>

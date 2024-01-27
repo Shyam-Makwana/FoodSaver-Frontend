@@ -8,6 +8,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Moment from 'react-moment';
 import { AuthContext } from "../context/auth-context";
+import { Link } from 'react-router-dom';
 
 const DisplayDetailUserDonFood = props => {
     const auth = useContext(AuthContext);
@@ -146,7 +147,7 @@ const DisplayDetailUserDonFood = props => {
                             <h5>
                                 <strong>{props.items.receiver.fullname} </strong> has requested to receive this food. Kindly update status
                             </h5>
-                            <a href="/userdonfood"><Button variant="primary" onClick={accept}>Collected</Button></a>{' '}
+                            <Link to="/userdonfood"><Button variant="primary" onClick={accept}>Collected</Button></Link>{' '}
                             <Button variant="danger" onClick={handleShow}>Find another receiver</Button>
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>

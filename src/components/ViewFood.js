@@ -5,6 +5,7 @@ import { useHttpClient } from '../hooks/http-hook';
 import { AuthContext } from '../context/auth-context';
 import Header from '../components/Header';
 import Moment from 'react-moment';
+import { Link } from 'react-router-dom';
 
 const ViewFood = props => {
 
@@ -72,7 +73,7 @@ const ViewFood = props => {
                                                 {props.items.expirytime}
                                             </Moment></p>
                                         <p><strong>Food Address : </strong>{props.items.address}, {props.items.city}, {props.items.state}</p>
-                                        <a href="/reqforfood">{checkId() && <button type="submit" className="btn btn-danger align-self-center mt-2" onClick={deletefood}>Delete Food</button>}</a>
+                                        <Link href="/reqforfood">{checkId() && <button type="submit" className="btn btn-danger align-self-center mt-2" onClick={deletefood}>Delete Food</button>}</Link>
                                     </div>
                                 </div>
                             </div>

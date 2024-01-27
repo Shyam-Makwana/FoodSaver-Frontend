@@ -1,6 +1,7 @@
 import React from 'react';
 import { Spinner, Button, Card } from 'react-bootstrap';
 import Header from './Header';
+import { Link } from 'react-router-dom';
 require('dotenv').config();
 
 const DisplayUserDonFood = props => {
@@ -18,7 +19,7 @@ const DisplayUserDonFood = props => {
                                 YOUR SUPPORT MATTERS CONTRIBUTE TO HELP US PROVIDE ESSENTIAL FOOD SUPPORT TO THOSE IN NEED
                             </Card.Text>
                             <div className="d-flex justify-content-center align-items-center mt-1">
-                                <a href="/donate"><Button variant="danger">Donate Now</Button></a>
+                                <Link to="/donate"><Button variant="danger">Donate Now</Button></Link>
                             </div>
                         </Card.Body>
                     </Card>
@@ -33,11 +34,11 @@ const DisplayUserDonFood = props => {
             <div className="row mt-5 ml-5">
                 {props.items.foods.map(food => (
                     <div className="ml-4 col-md-2 mb-4 shadow">
-                        <a href={`detailuserdonfood/${food.id}/${food.userId}`}>
+                        <Link to={`detailuserdonfood/${food.id}/${food.userId}`}>
                             <div className="container" >
                                 <img src={food.Url} alt="Sample" style={{ width: "100%", height: 200 }} />
                             </div>
-                        </a>
+                        </Link>
                         <div className="text-center">
                             <div className="container">
                                 <h5>{food.name}</h5></div>
