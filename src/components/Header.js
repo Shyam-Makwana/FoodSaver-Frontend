@@ -7,7 +7,7 @@ function Header() {
     const auth = useContext(AuthContext);
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Link to="/donate"><Navbar.Brand>FoodSaver</Navbar.Brand></Link>
+            <Link to="/"><Navbar.Brand>FoodSaver</Navbar.Brand></Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
